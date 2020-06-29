@@ -1,0 +1,71 @@
+{
+    "name": "prod",
+    "propertyName": "prod.jaescalo.edge.akau.webperf.it",
+    "groupId": 139286,
+    "isSecure": false,
+    "propertyId": 631419,
+    "latestVersionInfo": {
+        "propertyVersion": 1,
+        "updatedByUser": "3wgztk7hmowajjmi",
+        "updatedDate": "2020-06-28T20:16:07Z",
+        "productionStatus": "INACTIVE",
+        "stagingStatus": "ACTIVE",
+        "productId": "prd_Fresca",
+        "ruleFormat": "v2018-09-12"
+    },
+    "suggestedRuleFormat": "v2018-09-12",
+    "environmentHash": "91c940f8f0717beddd2b178eed28535f5bda562d954f392f88b535814e56c48d",
+    "ruleTreeHash": "212a4c7a9351b7fcbd89bc2798ee848f4d86ca6af6d357b50c769b430899cbb6",
+    "lastSavedHash": "91c940f8f0717beddd2b178eed28535f5bda562d954f392f88b535814e56c48d",
+    "lastValidatedHash": "91c940f8f0717beddd2b178eed28535f5bda562d954f392f88b535814e56c48d",
+    "lastSaveWarnings": [
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/validation_message.ssl_custom_warning_test_staging",
+            "errorLocation": {
+                "template": "templates/main.json",
+                "variables": [],
+                "location": "rules/behaviors/0",
+                "value": {
+                    "name": "origin",
+                    "options": {
+                        "cacheKeyHostname": "ORIGIN_HOSTNAME",
+                        "compress": true,
+                        "enableTrueClientIp": false,
+                        "forwardHostHeader": "ORIGIN_HOSTNAME",
+                        "hostname": "webapp.o.edge.akau.webperf.it",
+                        "httpPort": 80,
+                        "httpsPort": 443,
+                        "originSni": true,
+                        "originType": "CUSTOMER",
+                        "verificationMode": "CUSTOM",
+                        "originCertificate": "",
+                        "ports": "",
+                        "customValidCnValues": [
+                            "{{Origin Hostname}}",
+                            "{{Forward Host Header}}"
+                        ],
+                        "originCertsToHonor": "STANDARD_CERTIFICATE_AUTHORITIES",
+                        "standardCertificateAuthorities": [
+                            "akamai-permissive"
+                        ]
+                    }
+                }
+            },
+            "detail": "If you are changing your `Origin Server` SSL Certificate Verification settings it is strongly recommended that you test on Staging before activating on Production. Failure to test on Staging may result in a service outage."
+        }
+    ],
+    "lastSaveErrors": [],
+    "lastSaveHostnameErrors": [],
+    "lastSaveHostnameWarnings": [],
+    "lastSavedHostnamesHash": "15efc4db36b77c63e0a7ed2661c43567a4422e63785aebaa028de7cb4a6f2aa9",
+    "activeIn_STAGING_Info": {
+        "propertyVersion": 1,
+        "updatedByUser": "3wgztk7hmowajjmi",
+        "updatedDate": "2020-06-28T20:16:07Z",
+        "productionStatus": "INACTIVE",
+        "stagingStatus": "ACTIVE",
+        "etag": "48abd9f62a2a9dad68d22bf03e75e33117674a15",
+        "productId": "prd_Fresca",
+        "ruleFormat": "v2018-09-12"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "productId": "prd_Fresca",
+    "contractId": "ctr_3-1A42HS1",
+    "groupIds": [
+        139286
+    ],
+    "environments": [
+        "dev",
+        "prod"
+    ],
+    "version": "0.6.0",
+    "isSecure": false,
+    "edgeGridConfig": {
+        "section": "akau_papi"
+    },
+    "name": "jaescalo.edge.akau.webperf.it"
+}
