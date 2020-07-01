@@ -3,8 +3,7 @@
         "name": "default",
         "children": [
             "#include:performance.json",
-            "#include:Offload.json",
-            "#include:basic-auth.json"
+            "#include:Offload.json"
         ],
         "behaviors": [
             {
