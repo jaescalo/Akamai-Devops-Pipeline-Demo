@@ -28,13 +28,6 @@ pipeline {
         sh "source ~/.bash_profile 2> /dev/null; akamai pipeline check-promotion-status -p jaescalo.edge.akau.webperf.it ${PIPELINE_ENV}"
       }
     }
-    stage ("Add version notes") {
-      steps {
-        echo "Step 3: Add version notes to dev Env."
-        sh "cp ~/workspace/add_pipeline_cli_comments.py ./"
-        sh "source ~/.bash_profile 2> /dev/null; python3 add_pipeline_cli_comments.py akau_papi jaescalo.edge.akau.webperf.it ${PIPELINE_ENV} ${NOTES}"
-      }
-    }
     stage ("Save Changes to dev Env to restore rule tree") {
       steps {
         echo "Step 4: Save Changes to dev Env. Job: Jenkins_${JOB_NAME}-${BUILD_NUMBER}"
