@@ -30,8 +30,10 @@ pipeline {
     stage ("Add version notes to Property") {
       steps {
         echo "Step 3: Add version notes to dev Env property."
+        sh "NOTES=$(head -n 1 ./jaescalo.edge.akau.webperf.it/README.md)"
+        sh "echo $NOTES"
         sh "cp ~/workspace/add_pipeline_cli_comments_v1.py ./"
-        sh "source ~/.bash_profile 2> /dev/null; python3 add_pipeline_cli_comments_v1.py akau_papi jaescalo.edge.akau.webperf.it ${PIPELINE_ENV} ${GIT_COMMIT}"
+        sh "source ~/.bash_profile 2> /dev/null; python3 add_pipeline_cli_comments_v1.py akau_papi jaescalo.edge.akau.webperf.it ${PIPELINE_ENV} $NOTES"
       }
     }
     stage ("Save Changes to dev Env") {
