@@ -34,7 +34,7 @@ pipeline {
         NOTES=$(head -n 1 ./jaescalo.edge.akau.webperf.it/README.md)
         echo $NOTES
         cp ~/workspace/add_pipeline_cli_comments_v1.py ./
-        source ~/.bash_profile 2> /dev/null; python3 add_pipeline_cli_comments_v1.py akau_papi jaescalo.edge.akau.webperf.it ${PIPELINE_ENV} $NOTES
+        source ~/.bash_profile 2> /dev/null; python3 add_pipeline_cli_comments_v1.py akau_papi jaescalo.edge.akau.webperf.it ${PIPELINE_ENV} "$NOTES"
         '''
       }
     }
