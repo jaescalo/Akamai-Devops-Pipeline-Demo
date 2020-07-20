@@ -27,7 +27,7 @@ pipeline {
         sh "source ~/.bash_profile 2> /dev/null; akamai pipeline save -p jaescalo.edge.akau.webperf.it ${PIPELINE_ENV}"
       }
     }
-    stage ("Add version notes to Property") {
+    stage ("Add version notes to the Property") {
       steps {
         echo "Step 3: Add version notes to dev Env property."
         sh '''
