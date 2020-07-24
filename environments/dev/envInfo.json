@@ -5,19 +5,20 @@
     "isSecure": false,
     "propertyId": 631418,
     "latestVersionInfo": {
-        "propertyVersion": 39,
+        "propertyVersion": 40,
         "updatedByUser": "3wgztk7hmowajjmi",
-        "updatedDate": "2020-06-28T19:49:07Z",
+        "updatedDate": "2020-07-24T21:32:31Z",
         "productionStatus": "INACTIVE",
         "stagingStatus": "ACTIVE",
         "productId": "prd_Fresca",
-        "ruleFormat": "v2018-09-12"
+        "ruleFormat": "v2018-09-12",
+        "note": "CSS and JavaScript TTL of 21d"
     },
     "suggestedRuleFormat": "v2018-09-12",
-    "environmentHash": "91c940f8f0717beddd2b178eed28535f5bda562d954f392f88b535814e56c48d",
-    "ruleTreeHash": "212a4c7a9351b7fcbd89bc2798ee848f4d86ca6af6d357b50c769b430899cbb6",
-    "lastSavedHash": "91c940f8f0717beddd2b178eed28535f5bda562d954f392f88b535814e56c48d",
-    "lastValidatedHash": "91c940f8f0717beddd2b178eed28535f5bda562d954f392f88b535814e56c48d",
+    "environmentHash": "623fba2fdcdf1b0fa2ff442fe4508f86e302da91a67c9c2517bc5789e18517ec",
+    "ruleTreeHash": "3cfa3f8522923ed049222b0bd30387afead3232bad0816d64938ffcc8598cd02",
+    "lastSavedHash": "623fba2fdcdf1b0fa2ff442fe4508f86e302da91a67c9c2517bc5789e18517ec",
+    "lastValidatedHash": "623fba2fdcdf1b0fa2ff442fe4508f86e302da91a67c9c2517bc5789e18517ec",
     "lastSaveWarnings": [
         {
             "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/validation_message.ssl_custom_warning_test_staging",
@@ -52,6 +53,24 @@
                 }
             },
             "detail": "If you are changing your `Origin Server` SSL Certificate Verification settings it is strongly recommended that you test on Staging before activating on Production. Failure to test on Staging may result in a service outage."
+        },
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/incompatible_features",
+            "errorLocation": {
+                "template": "templates/basic-auth.json",
+                "variables": [],
+                "location": "behaviors/1",
+                "value": {
+                    "name": "constructResponse",
+                    "options": {
+                        "enabled": true,
+                        "body": "Unauthorized",
+                        "responseCode": 401,
+                        "forceEviction": false
+                    }
+                }
+            },
+            "detail": "Please ensure that your response body HTML on your `Construct Response` behavior, is assembled correctly."
         }
     ],
     "lastSaveErrors": [],
@@ -59,13 +78,14 @@
     "lastSaveHostnameWarnings": [],
     "lastSavedHostnamesHash": "cfcbed72a6d82a55f4798fce6080d674fc7b630bd2715e620c008021a5343bb2",
     "activeIn_STAGING_Info": {
-        "propertyVersion": 39,
+        "propertyVersion": 40,
         "updatedByUser": "3wgztk7hmowajjmi",
-        "updatedDate": "2020-06-28T19:49:07Z",
+        "updatedDate": "2020-07-24T21:32:31Z",
         "productionStatus": "INACTIVE",
         "stagingStatus": "ACTIVE",
-        "etag": "c8d41257067b198d870e2d6757274ad9a3823246",
+        "etag": "0a5473b290d7e8ee44a1c37413e2407210e69367",
         "productId": "prd_Fresca",
-        "ruleFormat": "v2018-09-12"
+        "ruleFormat": "v2018-09-12",
+        "note": "CSS and JavaScript TTL of 21d"
     }
 }

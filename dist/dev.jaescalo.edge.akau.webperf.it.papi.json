@@ -101,7 +101,7 @@
                                 "options": {
                                     "behavior": "MAX_AGE",
                                     "mustRevalidate": false,
-                                    "ttl": "1d"
+                                    "ttl": "21d"
                                 }
                             },
                             {
@@ -296,6 +296,57 @@
                 "criteria": [],
                 "criteriaMustSatisfy": "all",
                 "comments": "Controls caching, which offloads traffic away from the origin. Most objects types are not cached. However, the child rules override this behavior for certain subsets of requests."
+            },
+            {
+                "name": "/admin/ protection",
+                "children": [],
+                "behaviors": [
+                    {
+                        "name": "modifyOutgoingResponseHeader",
+                        "options": {
+                            "action": "MODIFY",
+                            "standardModifyHeaderName": "OTHER",
+                            "newHeaderValue": "Basic realm=\"DevOps Admin Area\"",
+                            "avoidDuplicateHeaders": false,
+                            "customHeaderName": "WWW-Authenticate"
+                        }
+                    },
+                    {
+                        "name": "constructResponse",
+                        "options": {
+                            "enabled": true,
+                            "body": "Unauthorized",
+                            "responseCode": 401,
+                            "forceEviction": false
+                        }
+                    }
+                ],
+                "criteria": [
+                    {
+                        "name": "path",
+                        "options": {
+                            "matchOperator": "MATCHES_ONE_OF",
+                            "values": [
+                                "/admin/*"
+                            ],
+                            "matchCaseSensitive": false
+                        }
+                    },
+                    {
+                        "name": "requestHeader",
+                        "options": {
+                            "headerName": "Authorization",
+                            "matchOperator": "IS_NOT_ONE_OF",
+                            "values": [
+                                "Basic YWRtaW46czNjcjN0IQ=="
+                            ],
+                            "matchWildcardName": false,
+                            "matchWildcardValue": false,
+                            "matchCaseSensitiveValue": true
+                        }
+                    }
+                ],
+                "criteriaMustSatisfy": "all"
             }
         ],
         "behaviors": [
