@@ -5,7 +5,7 @@
     "isSecure": false,
     "propertyId": 631418,
     "latestVersionInfo": {
-        "propertyVersion": 1,
+        "propertyVersion": 38,
         "updatedByUser": "3wgztk7hmowajjmi",
         "updatedDate": "2020-06-28T19:49:07Z",
         "productionStatus": "INACTIVE",
@@ -59,7 +59,7 @@
     "lastSaveHostnameWarnings": [],
     "lastSavedHostnamesHash": "cfcbed72a6d82a55f4798fce6080d674fc7b630bd2715e620c008021a5343bb2",
     "activeIn_STAGING_Info": {
-        "propertyVersion": 1,
+        "propertyVersion": 38,
         "updatedByUser": "3wgztk7hmowajjmi",
         "updatedDate": "2020-06-28T19:49:07Z",
         "productionStatus": "INACTIVE",
