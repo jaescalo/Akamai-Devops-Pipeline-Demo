@@ -1,39 +1,28 @@
 {
-    "name": "dev.jaescalo.edge.akau.webperf.it",
-    "propertyId": 631418,
+    "name": "dev",
     "propertyName": "dev.jaescalo.edge.akau.webperf.it",
     "groupId": 139286,
     "isSecure": false,
+    "propertyId": 631418,
     "latestVersionInfo": {
-        "propertyVersion": 37,
+        "propertyVersion": 1,
         "updatedByUser": "3wgztk7hmowajjmi",
-        "updatedDate": "2020-07-20T19:14:13Z",
+        "updatedDate": "2020-06-28T19:49:07Z",
         "productionStatus": "INACTIVE",
         "stagingStatus": "ACTIVE",
-        "etag": "3965559a8266fff4d77f5ce1aeac3c0471f23fd3",
         "productId": "prd_Fresca",
-        "ruleFormat": "v2018-09-12",
-        "note": "CSS and JavaScript TTL of 20d"
+        "ruleFormat": "v2018-09-12"
     },
-    "activeIn_STAGING_Info": {
-        "propertyVersion": 37,
-        "updatedByUser": "3wgztk7hmowajjmi",
-        "updatedDate": "2020-07-20T19:14:13Z",
-        "productionStatus": "INACTIVE",
-        "stagingStatus": "ACTIVE",
-        "etag": "3965559a8266fff4d77f5ce1aeac3c0471f23fd3",
-        "productId": "prd_Fresca",
-        "ruleFormat": "v2018-09-12",
-        "note": "CSS and JavaScript TTL of 20d"
-    },
-    "environmentHash": "f259a335b41f4a84c465f8dbc38bce56a1469d731d0035ab218533ec3acfefb7",
-    "ruleTreeHash": "e7b9a7761ae5e0951e1ec96bb7d68c023ac45cfb92843a4a8b589497cc871c89",
-    "lastValidatedHash": "f259a335b41f4a84c465f8dbc38bce56a1469d731d0035ab218533ec3acfefb7",
+    "suggestedRuleFormat": "v2018-09-12",
+    "environmentHash": "91c940f8f0717beddd2b178eed28535f5bda562d954f392f88b535814e56c48d",
+    "ruleTreeHash": "212a4c7a9351b7fcbd89bc2798ee848f4d86ca6af6d357b50c769b430899cbb6",
+    "lastSavedHash": "91c940f8f0717beddd2b178eed28535f5bda562d954f392f88b535814e56c48d",
+    "lastValidatedHash": "91c940f8f0717beddd2b178eed28535f5bda562d954f392f88b535814e56c48d",
     "lastSaveWarnings": [
         {
             "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/validation_message.ssl_custom_warning_test_staging",
             "errorLocation": {
-                "template": "config-snippets/main.json",
+                "template": "templates/main.json",
                 "variables": [],
                 "location": "rules/behaviors/0",
                 "value": {
@@ -63,41 +52,20 @@
                 }
             },
             "detail": "If you are changing your `Origin Server` SSL Certificate Verification settings it is strongly recommended that you test on Staging before activating on Production. Failure to test on Staging may result in a service outage."
-        },
-        {
-            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/incompatible_features",
-            "errorLocation": {
-                "template": "config-snippets/_admin_protection.json",
-                "variables": [],
-                "location": "behaviors/1",
-                "value": {
-                    "name": "constructResponse",
-                    "options": {
-                        "enabled": true,
-                        "body": "Unauthorized",
-                        "responseCode": 401,
-                        "forceEviction": false
-                    }
-                }
-            },
-            "detail": "Please ensure that your response body HTML on your `Construct Response` behavior, is assembled correctly."
         }
     ],
     "lastSaveErrors": [],
-    "lastSavedHash": "f259a335b41f4a84c465f8dbc38bce56a1469d731d0035ab218533ec3acfefb7",
     "lastSaveHostnameErrors": [],
     "lastSaveHostnameWarnings": [],
-    "lastSavedHostnamesHash": "c66d30270d9ed88361da29019a5513cedb2d72d01400c6a40ecf0b82b64ed0e2",
-    "activeIn_PRODUCTION_Info": {
-        "propertyVersion": 34,
+    "lastSavedHostnamesHash": "cfcbed72a6d82a55f4798fce6080d674fc7b630bd2715e620c008021a5343bb2",
+    "activeIn_STAGING_Info": {
+        "propertyVersion": 1,
         "updatedByUser": "3wgztk7hmowajjmi",
-        "updatedDate": "2020-07-08T19:04:28Z",
-        "productionStatus": "ACTIVE",
-        "stagingStatus": "DEACTIVATED",
-        "etag": "3b4efadda59b4e4cee9f33149538bdb5bb76e013",
+        "updatedDate": "2020-06-28T19:49:07Z",
+        "productionStatus": "INACTIVE",
+        "stagingStatus": "ACTIVE",
+        "etag": "c8d41257067b198d870e2d6757274ad9a3823246",
         "productId": "prd_Fresca",
-        "ruleFormat": "v2018-09-12",
-        "note": "CSS and JavaScript TTL of 19d"
-    },
-    "suggestedRuleFormat": "v2018-09-12"
+        "ruleFormat": "v2018-09-12"
+    }
 }

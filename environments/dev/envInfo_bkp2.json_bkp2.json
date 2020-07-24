@@ -1,0 +1,103 @@
+{
+    "name": "dev.jaescalo.edge.akau.webperf.it",
+    "propertyId": 631418,
+    "propertyName": "dev.jaescalo.edge.akau.webperf.it",
+    "groupId": 139286,
+    "isSecure": false,
+    "latestVersionInfo": {
+        "propertyVersion": 37,
+        "updatedByUser": "3wgztk7hmowajjmi",
+        "updatedDate": "2020-07-20T19:14:13Z",
+        "productionStatus": "INACTIVE",
+        "stagingStatus": "ACTIVE",
+        "etag": "3965559a8266fff4d77f5ce1aeac3c0471f23fd3",
+        "productId": "prd_Fresca",
+        "ruleFormat": "v2018-09-12",
+        "note": "CSS and JavaScript TTL of 20d"
+    },
+    "activeIn_STAGING_Info": {
+        "propertyVersion": 37,
+        "updatedByUser": "3wgztk7hmowajjmi",
+        "updatedDate": "2020-07-20T19:14:13Z",
+        "productionStatus": "INACTIVE",
+        "stagingStatus": "ACTIVE",
+        "etag": "3965559a8266fff4d77f5ce1aeac3c0471f23fd3",
+        "productId": "prd_Fresca",
+        "ruleFormat": "v2018-09-12",
+        "note": "CSS and JavaScript TTL of 20d"
+    },
+    "environmentHash": "f259a335b41f4a84c465f8dbc38bce56a1469d731d0035ab218533ec3acfefb7",
+    "ruleTreeHash": "e7b9a7761ae5e0951e1ec96bb7d68c023ac45cfb92843a4a8b589497cc871c89",
+    "lastValidatedHash": "f259a335b41f4a84c465f8dbc38bce56a1469d731d0035ab218533ec3acfefb7",
+    "lastSaveWarnings": [
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/validation_message.ssl_custom_warning_test_staging",
+            "errorLocation": {
+                "template": "config-snippets/main.json",
+                "variables": [],
+                "location": "rules/behaviors/0",
+                "value": {
+                    "name": "origin",
+                    "options": {
+                        "cacheKeyHostname": "ORIGIN_HOSTNAME",
+                        "compress": true,
+                        "enableTrueClientIp": false,
+                        "forwardHostHeader": "ORIGIN_HOSTNAME",
+                        "hostname": "webapp.o.edge.akau.webperf.it",
+                        "httpPort": 80,
+                        "httpsPort": 443,
+                        "originSni": true,
+                        "originType": "CUSTOMER",
+                        "verificationMode": "CUSTOM",
+                        "originCertificate": "",
+                        "ports": "",
+                        "customValidCnValues": [
+                            "{{Origin Hostname}}",
+                            "{{Forward Host Header}}"
+                        ],
+                        "originCertsToHonor": "STANDARD_CERTIFICATE_AUTHORITIES",
+                        "standardCertificateAuthorities": [
+                            "akamai-permissive"
+                        ]
+                    }
+                }
+            },
+            "detail": "If you are changing your `Origin Server` SSL Certificate Verification settings it is strongly recommended that you test on Staging before activating on Production. Failure to test on Staging may result in a service outage."
+        },
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/incompatible_features",
+            "errorLocation": {
+                "template": "config-snippets/_admin_protection.json",
+                "variables": [],
+                "location": "behaviors/1",
+                "value": {
+                    "name": "constructResponse",
+                    "options": {
+                        "enabled": true,
+                        "body": "Unauthorized",
+                        "responseCode": 401,
+                        "forceEviction": false
+                    }
+                }
+            },
+            "detail": "Please ensure that your response body HTML on your `Construct Response` behavior, is assembled correctly."
+        }
+    ],
+    "lastSaveErrors": [],
+    "lastSavedHash": "f259a335b41f4a84c465f8dbc38bce56a1469d731d0035ab218533ec3acfefb7",
+    "lastSaveHostnameErrors": [],
+    "lastSaveHostnameWarnings": [],
+    "lastSavedHostnamesHash": "c66d30270d9ed88361da29019a5513cedb2d72d01400c6a40ecf0b82b64ed0e2",
+    "activeIn_PRODUCTION_Info": {
+        "propertyVersion": 34,
+        "updatedByUser": "3wgztk7hmowajjmi",
+        "updatedDate": "2020-07-08T19:04:28Z",
+        "productionStatus": "ACTIVE",
+        "stagingStatus": "DEACTIVATED",
+        "etag": "3b4efadda59b4e4cee9f33149538bdb5bb76e013",
+        "productId": "prd_Fresca",
+        "ruleFormat": "v2018-09-12",
+        "note": "CSS and JavaScript TTL of 19d"
+    },
+    "suggestedRuleFormat": "v2018-09-12"
+}
