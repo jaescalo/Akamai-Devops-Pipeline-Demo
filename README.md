@@ -1,6 +1,9 @@
 CSS and JavaScript TTL of 21d
 
 24/07/2020 Changes:
+* Increase TTL for CSS and JS from 21d to 22d.
+
+24/07/2020 Changes:
 * Increase TTL for CSS and JS from 20d to 21d.
 
 08/07/2020 Changes:
