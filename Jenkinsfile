@@ -68,7 +68,7 @@ pipeline {
     }
     stage ("Commit to GitHub dev Branch") {
       steps {
-        echo "Step 7: Commit changes to dev Branch"
+        echo "Step 7: Commit changes to master Branch"
         withCredentials([usernamePassword(credentialsId: '5153d0dc-5894-4cbe-9790-bdb840ec1734', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
           script {
             env.ENCODEDUSER=URLEncoder.encode(GIT_USERNAME, "UTF-8")
@@ -77,7 +77,7 @@ pipeline {
           cd $WORKSPACE/jaescalo.edge.akau.webperf.it
           git add -A
           git commit -m 'Build success. Committing files'
-          git push https://${ENCODEDUSER}:${GIT_PASSWORD}@github.com/jaescalo/akaudevops-pipeline.git HEAD:dev -f --tags
+          git push https://${ENCODEDUSER}:${GIT_PASSWORD}@github.com/jaescalo/akaudevops-pipeline.git HEAD:master -f --tags
           """
         }
       }

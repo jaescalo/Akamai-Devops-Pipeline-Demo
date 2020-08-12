@@ -1,7 +1,7 @@
-CSS and JavaScript TTL of 21d
+CSS and JavaScript TTL of 23d and update to Jenkins file.
 
 11/08/2020 Changes:
-* Increase TTL for CSS and JS from 22d to 23d.
+* Increase TTL for CSS and JS from 22d to 23d and update to Jenkins file.
 
 11/08/2020 Changes:
 * Increase TTL for CSS and JS from 21d to 22d.
