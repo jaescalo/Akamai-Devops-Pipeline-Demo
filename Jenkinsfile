@@ -21,33 +21,16 @@ pipeline {
         ])
       }
     }
-    stage ("Save and Create new Property version") {
-      steps {
-        echo "Step 2: Save Changes to dev Env. Job: Jenkins_${JOB_NAME}-${BUILD_NUMBER}"
-        sh "source ~/.bash_profile 2> /dev/null; akamai pipeline save -p jaescalo.edge.akau.webperf.it ${PIPELINE_ENV}"
-      }
-    }
-    stage ("Add version notes to the Property") {
-      steps {
-        echo "Step 3: Add version notes to dev Env property."
-        sh '''
-        NOTES=$(head -n 1 ./jaescalo.edge.akau.webperf.it/README.md)
-        echo $NOTES
-        cp ~/workspace/add_pipeline_cli_comments_v1.py ./
-        source ~/.bash_profile 2> /dev/null; python3 add_pipeline_cli_comments_v1.py akau_papi jaescalo.edge.akau.webperf.it ${PIPELINE_ENV} "$NOTES"
-        '''
-      }
-    }
     stage ("Save Changes to dev Env") {
       steps {
-        echo "Step 4: Save Changes to dev Env. Job: Jenkins_${JOB_NAME}-${BUILD_NUMBER}"
+        echo "Step 2: Save Changes to dev Env. Job: Jenkins_${JOB_NAME}-${BUILD_NUMBER}"
         sh "source ~/.bash_profile 2> /dev/null; akamai pipeline save -p jaescalo.edge.akau.webperf.it ${PIPELINE_ENV}"
         sh "source ~/.bash_profile 2> /dev/null; akamai pipeline check-promotion-status -p jaescalo.edge.akau.webperf.it ${PIPELINE_ENV}"
       }
     }
     stage ("Promote dev Env") {
       steps {
-        echo "Step 5: Promote dev Env. Job: Jenkins_${JOB_NAME}-${BUILD_NUMBER}"
+        echo "Step 3: Promote dev Env. Job: Jenkins_${JOB_NAME}-${BUILD_NUMBER}"
         sh "source ~/.bash_profile 2> /dev/null; akamai pipeline promote -w -p jaescalo.edge.akau.webperf.it -n staging ${PIPELINE_ENV} -m Jenkins_${JOB_NAME}-${BUILD_NUMBER} --emails jaescalo@akamai.com"
       }
     }
@@ -55,20 +38,20 @@ pipeline {
       parallel {
         stage ("Check dev Env Promotion Status") {
           steps {
-            echo "Step 6.a:  Check dev Env Promotion Status. Job: Jenkins_${JOB_NAME}-${BUILD_NUMBER}"
+            echo "Step 4.a:  Check dev Env Promotion Status. Job: Jenkins_${JOB_NAME}-${BUILD_NUMBER}"
             sh "source ~/.bash_profile 2> /dev/null; akamai pipeline check-promotion-status -p jaescalo.edge.akau.webperf.it ${PIPELINE_ENV}"
           }
         }
         stage("Testing dev Env"){
           steps{
-            echo "Step 6.b: Test Suite for dev Env"
+            echo "Step 4.b: Test Suite for dev Env"
           }
         }
       }
     }
-    stage ("Commit to GitHub dev Branch") {
+    stage ("Commit to GitHub master Branch") {
       steps {
-        echo "Step 7: Commit changes to master Branch"
+        echo "Step 5: Commit changes to master Branch"
         withCredentials([usernamePassword(credentialsId: '5153d0dc-5894-4cbe-9790-bdb840ec1734', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
           script {
             env.ENCODEDUSER=URLEncoder.encode(GIT_USERNAME, "UTF-8")
