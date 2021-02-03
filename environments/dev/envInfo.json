@@ -5,20 +5,20 @@
     "isSecure": false,
     "propertyId": 631418,
     "latestVersionInfo": {
-        "propertyVersion": 47,
+        "propertyVersion": 48,
         "updatedByUser": "3wgztk7hmowajjmi",
-        "updatedDate": "2021-02-03T02:22:02Z",
+        "updatedDate": "2021-02-03T02:31:34Z",
         "productionStatus": "INACTIVE",
         "stagingStatus": "ACTIVE",
         "productId": "prd_Fresca",
         "ruleFormat": "v2018-09-12",
-        "note": "CSS and JavaScript TTL of 30d"
+        "note": "CSS and JavaScript TTL of 31d"
     },
     "suggestedRuleFormat": "v2018-09-12",
-    "environmentHash": "2b63f5fb9fe1c7eddb1cf1aa1d4b699e8f95464605dca414dfdc047f63d005a8",
-    "ruleTreeHash": "93b6c999522e858bf5156016d780d08a4f1287687c2eda8cde598cfef6a4d2cf",
-    "lastSavedHash": "2b63f5fb9fe1c7eddb1cf1aa1d4b699e8f95464605dca414dfdc047f63d005a8",
-    "lastValidatedHash": "2b63f5fb9fe1c7eddb1cf1aa1d4b699e8f95464605dca414dfdc047f63d005a8",
+    "environmentHash": "efc9837440a6f708fa369d90c4c6689bd6df1703191e3f944f1163735e1a6b2d",
+    "ruleTreeHash": "972a7d79d44302c7522360404a1d61c3ee4b408e42cf5e7819780e4c088120a9",
+    "lastSavedHash": "efc9837440a6f708fa369d90c4c6689bd6df1703191e3f944f1163735e1a6b2d",
+    "lastValidatedHash": "efc9837440a6f708fa369d90c4c6689bd6df1703191e3f944f1163735e1a6b2d",
     "lastSaveWarnings": [
         {
             "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/validation_message.ssl_custom_warning_test_staging",
@@ -78,15 +78,15 @@
     "lastSaveHostnameWarnings": [],
     "lastSavedHostnamesHash": "cfcbed72a6d82a55f4798fce6080d674fc7b630bd2715e620c008021a5343bb2",
     "activeIn_STAGING_Info": {
-        "propertyVersion": 47,
+        "propertyVersion": 48,
         "updatedByUser": "3wgztk7hmowajjmi",
-        "updatedDate": "2021-02-03T02:22:02Z",
+        "updatedDate": "2021-02-03T02:31:34Z",
         "productionStatus": "INACTIVE",
         "stagingStatus": "ACTIVE",
-        "etag": "182fe154d25d6ce5ac5c17a7d0a52338f2b37910",
+        "etag": "bf944ba9048228fc7d5375172256166b9fd95bf0",
         "productId": "prd_Fresca",
         "ruleFormat": "v2018-09-12",
-        "note": "CSS and JavaScript TTL of 30d"
+        "note": "CSS and JavaScript TTL of 31d"
     },
     "activeIn_PRODUCTION_Info": {
         "propertyVersion": 45,
