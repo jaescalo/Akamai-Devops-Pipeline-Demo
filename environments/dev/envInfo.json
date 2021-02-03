@@ -7,12 +7,12 @@
     "latestVersionInfo": {
         "propertyVersion": 46,
         "updatedByUser": "3wgztk7hmowajjmi",
-        "updatedDate": "2021-02-03T01:16:46Z",
+        "updatedDate": "2021-02-03T01:18:04Z",
         "productionStatus": "INACTIVE",
-        "stagingStatus": "INACTIVE",
-        "etag": "aa4a0fabaa6fb5ec2dc31ba3b7fa57a0008e528b",
+        "stagingStatus": "ACTIVE",
         "productId": "prd_Fresca",
-        "ruleFormat": "v2018-09-12"
+        "ruleFormat": "v2018-09-12",
+        "note": "My Notes"
     },
     "suggestedRuleFormat": "v2018-09-12",
     "environmentHash": "87bdec5d973cf272ca204251321b5ebf105d4e7d2ef9f6c3ddbf19f4675c96a1",
@@ -78,22 +78,23 @@
     "lastSaveHostnameWarnings": [],
     "lastSavedHostnamesHash": "cfcbed72a6d82a55f4798fce6080d674fc7b630bd2715e620c008021a5343bb2",
     "activeIn_STAGING_Info": {
-        "propertyVersion": 45,
+        "propertyVersion": 46,
         "updatedByUser": "3wgztk7hmowajjmi",
-        "updatedDate": "2020-08-11T23:32:42Z",
-        "productionStatus": "ACTIVE",
+        "updatedDate": "2021-02-03T01:18:04Z",
+        "productionStatus": "INACTIVE",
         "stagingStatus": "ACTIVE",
-        "etag": "6e32963ae621abce265988ffb8933883d691e8d8",
+        "etag": "0f61b5a64d7eb530c0275224b34f23827b6750a3",
         "productId": "prd_Fresca",
-        "ruleFormat": "v2018-09-12"
+        "ruleFormat": "v2018-09-12",
+        "note": "My Notes"
     },
     "activeIn_PRODUCTION_Info": {
         "propertyVersion": 45,
         "updatedByUser": "3wgztk7hmowajjmi",
-        "updatedDate": "2020-08-11T23:32:42Z",
-        "productionStatus": "ACTIVE",
-        "stagingStatus": "ACTIVE",
-        "etag": "6e32963ae621abce265988ffb8933883d691e8d8",
+        "updatedDate": "2021-02-02T20:04:18Z",
+        "productionStatus": "INACTIVE",
+        "stagingStatus": "DEACTIVATED",
+        "etag": "ef6c80f3a00081ed3155fb76f77e946488aa9cc8",
         "productId": "prd_Fresca",
         "ruleFormat": "v2018-09-12"
     }
