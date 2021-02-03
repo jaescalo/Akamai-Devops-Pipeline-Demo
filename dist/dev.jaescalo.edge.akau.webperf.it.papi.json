@@ -101,7 +101,7 @@
                                 "options": {
                                     "behavior": "MAX_AGE",
                                     "mustRevalidate": false,
-                                    "ttl": "27d"
+                                    "ttl": "30d"
                                 }
                             },
                             {
